@@ -26,3 +26,7 @@ plt.plot(x.time,x.dat1,'green')
 plt.plot(x.time,x.dat3,'m')
 plt.plot(stim_timing,[max(x.dat3)+0.5]*len(stim_timing),'.')
 stim_timing = x.time[peakutils.indexes(x.dat3,thres = 1/max(x.dat3), min_dist = 1000)]
+plt.show()
+plt.savefig(name + '.png',format = 'png',dpi =300)
+plt.close()
+
